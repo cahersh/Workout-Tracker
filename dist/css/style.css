@@ -8,6 +8,7 @@ body {
 BUTTONS
 */
 .add__btn,
+.add__set__btn,
 .delete__set {
     font-size: 36px;
     background: none;

@@ -5,16 +5,15 @@ export const getInput = () => elements.addExerciseInput.value;
 
 // Purpose: create HTML for exercise
 const createExercise = (exercise) => `
-    <div class="exercise__container">
+    <div id="${exercise}" class="exercise__container">
         <div class="exercise">${exercise}</div>
-        <button class="add__btn"><i class="icon ion-md-add"></i></button>
+        <button class="add__set__btn add__set__${exercise}"><i class="icon ion-md-add"></i></button>
     </div>
 `;
 
 // Purpose: render the exercise
 export const renderExercise = (exercise) => {
     let exerciseHTML = createExercise(exercise);
-    console.log(exerciseHTML);
     elements.exerciseSection.insertAdjacentHTML('beforeend', exerciseHTML);
 }
 
