@@ -1,21 +1,50 @@
 <!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<html lang="en">
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title></title>
+        <title>Chandler's Workout Tracker App</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:100,300,400,600" rel="stylesheet" type="text/css">
+        <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href ="css/queries.css">
     </head>
     <body>
-        <!--[if lt IE 7]>
-            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
-        <![endif]-->
-        <h1>Blank Project!</h1>
+        <section id="app__logo">
+            <!--TODO-->
+        </section>
+        <section id="add__exercise__section">
+            <div class="add__exercise__container">
+                <input type="text" class="add__exercise" placeholder="Add exercise">
+                <button id="add__exercise__btn"class="add__btn"><i class="icon ion-md-add"></i></button>
+            </div>
+        </section>
+        <section id="exercise__section">
+            <div class="exercise__container">
+                <div class="exercise">Squat</div>
+                <button id="add__set__btn" class="add__btn"><i class="icon ion-md-add"></i></button>
+            </div>
+        </section>
+        <section id="set__section">
+                <div class="set__container">
+                    <div class="set">1</div>
+                    <div class="set__weight">205</div>
+                    <div class="x__rep__container"><i class="icon ion-md-close x__rep x__info"></i></div>
+                    <div class="set__reps">5</div>
+                    <button class="delete__set"><i class="icon ion-md-trash"></i></button>
+                </div>
+        </section>
+        <section id="add__set__section">
+            <div class="add__set__container">
+                <div class="set">1</div>
+                <input type="text" class="add__set" placeholder="Enter weight">
+                <div class="x__rep__container"><i class="icon ion-md-close x__rep"></i></div>
+                <input type="text" class="add__set" placeholder="Enter reps">
+                <button id="add__set__info__btn" class="add__btn"><i class="icon ion-md-add"></i></button>
+            </div>
+        </section>
         
         <script src="" async defer></script>
     </body>

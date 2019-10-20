@@ -1,0 +1,31 @@
+/* Big Tablet to 1200px (widths smaller than the 1140px row) */
+@media only screen and (max-width: 1200px) {
+ 
+}
+
+/* Small Phones to Small Tablets: 481 - 767px */
+@media only screen and (max-width: 767px) {
+    .add__exercise {
+        width: 95%;
+    }
+
+    .add__set__container {
+        /*grid-template-columns: 42.75% 4.75% 42.75% 9.75%;*/
+        grid-template-columns: 14.25% 35.625% 4.75% 35.625% 9.75%;
+    }
+
+    .set__container {
+        grid-template-columns: 14.25% 35.625% 4.75% 35.625% 9.75%;
+    }
+}
+
+/* Small Phones: 0 - 480px */
+@media only screen and (max-width: 480px) {
+    .add__exercise {
+        width: 90%;
+    }
+
+    .add__set__container {
+        grid-template-columns: 40.5% 4.5% 40.5% 14.5%;
+    }
+}
