@@ -5,7 +5,7 @@
 
 /* Small Phones to Small Tablets: 481 - 767px */
 @media only screen and (max-width: 767px) {
-    .add__exercise {
+    .add__exercise__input {
         width: 95%;
     }
 
@@ -21,7 +21,7 @@
 
 /* Small Phones: 0 - 480px */
 @media only screen and (max-width: 480px) {
-    .add__exercise {
+    .add__exercise__input {
         width: 90%;
     }
 

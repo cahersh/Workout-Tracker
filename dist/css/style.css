@@ -33,7 +33,7 @@ BUTTONS
     grid-template-columns: 95% 5%;
 }
 
-.add__exercise,
+.add__exercise__input,
 .add__set {
     height: 40px;
     font-size: 24px;
