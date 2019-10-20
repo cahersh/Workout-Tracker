@@ -1,4 +1,5 @@
-import Exercise from './models/Exercise'
+import Exercise from './models/Exercise';
+import AddSetForm from './models/AddSetForm';
 import * as addExerciseView from './views/addExerciseView';
 import * as addSetFormView from './views/addSetFormView';
 import {elements} from './views/base';
@@ -12,12 +13,14 @@ const controlAddExercise = () => {
 
     // if user actually inputted exercise
     if (exercise) {
-        // 2. New exercise object and add to state
-        state.exercise = new Exercise(exercise);
+        // If state does NOT have an exercise property or the exercise does NOT already exist
+        if(!state.hasOwnProperty(`exercise`) || state.exercise.exercise != exercise ) {
+            // 2. Create new exercise object and add to state
+            state.exercise = new Exercise(exercise);
 
-        // 3. Display Exercise section
-        addExerciseView.renderExercise(state.exercise.exercise);
-
+            // 3. Display Exercise section
+            addExerciseView.renderExercise(state.exercise.exercise);
+        }
         // 4. Clear added exercise text
         addExerciseView.clearInput();
     }
@@ -30,9 +33,11 @@ elements.addExercise.addEventListener('submit', e => {
 });
 
 // Purpose: Add Set Form controller
-const controlAddSetForm = (exerciseID) => {
-    // 1. Display Add Set Form view
-    console.log(`In controlAddSetForm and exerciseID = ${exerciseID}`);
+const controlAddSetForm = (exerciseID) => {s
+    // 1. New add set form object and add to state
+    state.addSetForm = new AddSetForm(exerciseID);
+
+    // 2. Display Add Set Form view
     addSetFormView.renderAddSetForm(exerciseID);
 };
 
@@ -44,7 +49,6 @@ elements.exerciseSection.addEventListener('click', e => {
 
     if(btn) {
         exerciseID = btn.parentElement.id;
-        console.log(exerciseID);
         controlAddSetForm(exerciseID);
     }
 });
