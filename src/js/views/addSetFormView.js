@@ -12,6 +12,7 @@ const createSetForm = () => `
 `;
 
 // Purpose: render the add set form
+// Input: exerciseID - which exercise section to add the add set form to
 export const renderAddSetForm = (exerciseID) => {
     let addSetFormHTML = createSetForm();
     document.getElementById(`${exerciseID}`).insertAdjacentHTML('afterend', addSetFormHTML);
